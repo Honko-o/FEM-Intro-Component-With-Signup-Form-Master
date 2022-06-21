@@ -1,0 +1,23 @@
+@use './variables' as *;
+
+.flow > * + * {
+  margin-top: var(--flow-gap, 1rem);
+}
+.d-block {
+  display: block;
+  width: 100%;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.rounded-border {
+  border-radius: var(--border-radius, 1rem);
+}
+@for $i from 4 through 7 {
+  .font-weight-#{$i}00 {
+    font-weight: #{$i}00;
+  }
+}
+.clr-red {
+  color: hsl(0, 100%, 74%);
+}

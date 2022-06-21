@@ -1,0 +1,275 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-gap, 1rem);
+}
+
+.d-block {
+  display: block;
+  width: 100%;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.rounded-border {
+  border-radius: var(--border-radius, 1rem);
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.clr-red {
+  color: #ff7a7a;
+}
+
+:root {
+  --flow-gap: 1rem;
+  --border-radius: 6px;
+}
+
+body {
+  background-color: #ff7a7a;
+  background-image: url("../images/bg-intro-mobile.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+@media (min-width: 45em) {
+  body {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 4rem auto;
+}
+
+.container > * + * {
+  margin-top: 2rem;
+}
+
+.form-header {
+  min-width: 315px;
+  margin: auto;
+}
+
+.form-header-intro {
+  text-align: center;
+}
+
+.form-header-intro__heading {
+  font-size: clamp(2rem, 2vw + 1rem, 4rem);
+}
+
+.form-header-intro__desc {
+  line-height: 2;
+}
+
+.form__free-try {
+  background-color: #6055a5;
+  margin-bottom: 1.5em;
+  padding: 1.25em;
+  line-height: 1.6;
+  box-shadow: 0px 8px 0px rgba(62, 60, 73, 0.3);
+}
+.form__free-try p {
+  width: 200px;
+  text-align: center;
+  margin: auto;
+}
+
+form {
+  background-color: white;
+  padding: 1.25em;
+  box-shadow: 0px 8px 0px rgba(62, 60, 73, 0.3);
+}
+
+.terms-and-services {
+  color: #b9b6d3;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.form-control {
+  height: 99px;
+  position: relative;
+}
+.form-control:not(.error) .error-body {
+  display: none;
+}
+.form-control.error input {
+  border: 2px solid #ff7a7a;
+}
+.form-control.error input:focus-visible {
+  outline: none;
+}
+.form-control.error input::placeholder {
+  color: #ff7a7a;
+}
+.form-control.error .error-body {
+  display: block;
+}
+.form-control input {
+  border: 1px solid #b9b6d3;
+  border-radius: calc(var(--border-radius) - 2px);
+  padding: 1rem;
+}
+.form-control input::placeholder {
+  color: #3e3c49;
+  font-weight: 600;
+}
+.form-control input:focus-visible {
+  outline: 1px solid #3e3c49;
+}
+.form-control em {
+  padding: 0.78125em;
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.form-control img {
+  position: absolute;
+  top: calc(50% - 44px);
+  right: 6%;
+  transform: translateY(50%);
+}
+.form-control .submit-btn {
+  border: none;
+  background-color: #38cc8c;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 5px 0 #30bb7f;
+  cursor: pointer;
+  transition: 500ms background-color;
+}
+.form-control .submit-btn:hover {
+  background-color: rgba(56, 204, 140, 0.8);
+}
+
+@media (min-width: 45em) {
+  .form-header {
+    flex: 1;
+  }
+
+  .form-header-intro {
+    text-align: left;
+    width: 80%;
+  }
+
+  .form-header-intro__heading {
+    width: 18ch;
+  }
+
+  .form-container {
+    flex: 1;
+  }
+
+  .form__free-try p {
+    width: auto;
+  }
+
+  .flex-pc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

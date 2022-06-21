@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/main.css" />
+    <script defer src="./app.js"></script>
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main>
+      <div class="container flex-pc">
+        <!-- Header -->
+        <header class="form-header">
+          <section class="form-header-intro flow">
+            <h1 class="form-header-intro__heading">
+              Learn to code by watching others
+            </h1>
+            <p class="form-header-intro__desc">
+              See how experienced developers solve problems in real-time.
+              Watching scripted tutorials is great, but understanding how
+              developers think is invaluable.
+            </p>
+          </section>
+        </header>
+        <!-- Form -->
+        <div class="form-container">
+          <div class="form__free-try rounded-border">
+            <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+          </div>
+          <form id="form" class="flow rounded-border" novalidate>
+            <div class="form-control">
+              <input
+                class="d-block"
+                id="first-name"
+                type="text"
+                name="first-name"
+                placeholder="First Name"
+              />
+              <div class="error-body">
+                <em class="error-message clr-red"
+                  >First Name cannot be empty</em
+                >
+                <img src="./images/icon-error.svg" alt="error icon" />
+              </div>
+            </div>
+            <div class="form-control">
+              <input
+                class="d-block"
+                id="last-name"
+                type="text"
+                name="last-name"
+                placeholder="Last Name"
+              />
+              <div class="error-body">
+                <em class="error-message clr-red">Last Name cannot be empty</em>
+                <img src="./images/icon-error.svg" alt="error icon" />
+              </div>
+            </div>
+            <div class="form-control">
+              <input
+                class="d-block"
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email Address"
+              />
+              <div class="error-body">
+                <em class="error-message clr-red"
+                  >Looks like this is not an email</em
+                >
+                <img src="./images/icon-error.svg" alt="error icon" />
+              </div>
+            </div>
+            <div class="form-control">
+              <input
+                class="d-block"
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Password"
+              />
+              <div class="error-body">
+                <em class="error-message clr-red">Password cannot be empty</em>
+                <img src="./images/icon-error.svg" alt="error icon" />
+              </div>
+            </div>
+            <div class="form-control">
+              <input
+                class="submit-btn d-block uppercase"
+                type="submit"
+                name="Claim your free trial"
+              />
+            </div>
+            <p class="terms-and-services">
+              By clicking the button, you are agreeing to our
+              <em class="font-weight-700 clr-red">Terms and Services</em>
+            </p>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
